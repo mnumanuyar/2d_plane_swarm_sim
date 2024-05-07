@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dkr1bdfqcmtxh"]
+
+[ext_resource type="PackedScene" uid="uid://otkfkfkmg7sl" path="res://scenes/plane.tscn" id="1_5jaa1"]
+
+[node name="Game" type="Node2D"]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_5jaa1")]
+
+[node name="Camera2D" type="Camera2D" parent="."]

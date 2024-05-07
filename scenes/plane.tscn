@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://otkfkfkmg7sl"]
+
+[ext_resource type="Script" path="res://scripts/plane_movement.gd" id="1_2q3x7"]
+[ext_resource type="Texture2D" uid="uid://2ephjneidbsw" path="res://assets/plane.png" id="2_bp10q"]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_2q3x7")
+metadata/controllable = false
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 4.76837e-07)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_bp10q")
