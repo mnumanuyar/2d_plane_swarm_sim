@@ -8,7 +8,7 @@ var rotation_direction = 0
 
 
 func _physics_process(delta):
-	rotation_direction = clamp(rotation_direction, 1, -1)
+	rotation_direction = clamp(rotation_direction,-1,1)
 	if get_meta("controllable"):
 		rotation_direction = Input.get_axis("ui_left", "ui_right")
 	

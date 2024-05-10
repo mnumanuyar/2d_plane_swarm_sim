@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://otkfkfkmg7sl"]
+[gd_scene load_steps=4 format=3 uid="uid://otkfkfkmg7sl"]
 
 [ext_resource type="Script" path="res://scripts/plane_movement.gd" id="1_2q3x7"]
 [ext_resource type="Texture2D" uid="uid://2ephjneidbsw" path="res://assets/plane.png" id="2_bp10q"]
+[ext_resource type="Script" path="res://scripts/Controller.gd" id="3_ick6l"]
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 motion_mode = 1
@@ -12,3 +13,6 @@ metadata/controllable = false
 position = Vector2(0, 4.76837e-07)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("2_bp10q")
+
+[node name="Controller" type="Node" parent="."]
+script = ExtResource("3_ick6l")
