@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/plane_movement.gd" id="1_2q3x7"]
 [ext_resource type="Texture2D" uid="uid://2ephjneidbsw" path="res://assets/plane.png" id="2_bp10q"]
-[ext_resource type="Script" path="res://scripts/Controller.gd" id="3_ick6l"]
+[ext_resource type="Script" path="res://scripts/controller.gd" id="3_ick6l"]
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 motion_mode = 1

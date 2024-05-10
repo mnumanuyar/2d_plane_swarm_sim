@@ -5,10 +5,10 @@
 
 [node name="Game" type="Node2D"]
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("1_5jaa1")]
+[node name="Player" parent="." instance=ExtResource("1_5jaa1")]
 metadata/controllable = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
-[node name="spawner" type="Node" parent="."]
+[node name="Spawner" type="Node" parent="."]
 script = ExtResource("2_62apw")
