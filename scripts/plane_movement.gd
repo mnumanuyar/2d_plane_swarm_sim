@@ -12,6 +12,9 @@ func _physics_process(delta):
 	if get_meta("controllable"):
 		rotation_direction = Input.get_axis("ui_left", "ui_right")
 	
+	if get_meta("stop"):
+		speed = 0
+	
 	velocity = -transform.y * speed
 	rotation += rotation_direction * rotation_speed * delta
 	

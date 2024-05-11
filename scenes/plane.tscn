@@ -8,6 +8,7 @@
 motion_mode = 1
 script = ExtResource("1_2q3x7")
 metadata/controllable = false
+metadata/stop = false
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, 4.76837e-07)
