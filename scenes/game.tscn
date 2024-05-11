@@ -1,14 +1,18 @@
 [gd_scene load_steps=3 format=3 uid="uid://dkr1bdfqcmtxh"]
 
 [ext_resource type="PackedScene" uid="uid://otkfkfkmg7sl" path="res://scenes/plane.tscn" id="1_5jaa1"]
-[ext_resource type="Script" path="res://scripts/spawner.gd" id="2_62apw"]
+[ext_resource type="PackedScene" uid="uid://c4gk60j8e7v5t" path="res://scenes/spawner.tscn" id="2_tc6ph"]
 
 [node name="Game" type="Node2D"]
 
-[node name="Player" parent="." instance=ExtResource("1_5jaa1")]
+[node name="Player4" parent="." instance=ExtResource("1_5jaa1")]
+position = Vector2(-45, 50)
 metadata/controllable = true
+
+[node name="Player" parent="." instance=ExtResource("1_5jaa1")]
+position = Vector2(-46, -17)
+metadata/stop = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
-[node name="Spawner" type="Node" parent="."]
-script = ExtResource("2_62apw")
+[node name="Spawner" parent="." instance=ExtResource("2_tc6ph")]
