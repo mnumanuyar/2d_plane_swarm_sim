@@ -1,10 +1,11 @@
 extends Node
 
 var plane = preload("res://scenes/plane.tscn")
+var count =2
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	for x in range(-10,10,1):
-		for y in range(-10,10,1):
+	for x in range(-count,count,1):
+		for y in range(-count,count,1):
 			var instance =plane.instantiate()
 			instance.global_transform.origin.x = x*30
 			instance.global_transform.origin.y = y*30
