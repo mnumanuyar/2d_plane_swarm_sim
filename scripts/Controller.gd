@@ -12,16 +12,20 @@ func _process(_delta):
 		return;
 		
 	var all_planes = get_tree().get_nodes_in_group("planes")
-	all_planes.sort_custom(sort_by_dist)
-	var closest_planes = all_planes.slice(1,4)
 	
+	var detected_planes = 0;
 	var result_direction = 0;
-	for plane in closest_planes:
+	for plane in all_planes:
+		if detected_planes > 3: continue
+		var dist = dist_to(plane)
+		
+		if dist >  Global.detect_dist: continue
+		detected_planes += 1
+		
 		# if angle to less than PI it is to our right
 		var angle_to = control_target.get_angle_to(plane.position)
 		var to_right =  (angle_to < PI/2) and (angle_to > - PI/2)
 		var direction = 1 if to_right else -1
-		var dist = dist_to(plane)
 
 		# dont get too close
 		if dist <  Global.min_dist:
@@ -41,3 +45,4 @@ func sort_by_dist(plane1,plane2):
 
 func dist_to(plane):
 	return control_target.position.distance_to(plane.position)
+	

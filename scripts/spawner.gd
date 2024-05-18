@@ -1,7 +1,7 @@
 extends Node
 
 var plane = preload("res://scenes/plane.tscn")
-var count =2
+var count = 10
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	for x in range(-count,count,1):
